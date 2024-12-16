@@ -9,7 +9,7 @@
 - **React**: Biblioteca principal para construir interfaces de usuario.
 - **Vite**: Herramienta de desarrollo para optimizar y compilar la aplicación rápidamente.
 - **TypeScript**: Añade tipado estático a JavaScript para una mejor escalabilidad y mantenibilidad.
-- **TailwindCSS**: Framework de utilidades CSS para un diseño responsivo y rápido.
+- **Chakra UI**: Cumple con las mejores prácticas de accesibilidad, personalización sencilla de colores, tamaños y estilos, soporte incorporado para breakpoints y estilos adaptables, componentes optimizados para aplicaciones desarrolladas con Reac.
 - **Zustand**: Pequeña biblioteca para la gestión del estado global.
 - **i18next**: Herramienta para la internacionalización, con soporte para detección de idioma y carga de traducciones desde el backend.
 - **SweetAlert2**: Biblioteca de alertas para crear mensajes interactivos y personalizados.
