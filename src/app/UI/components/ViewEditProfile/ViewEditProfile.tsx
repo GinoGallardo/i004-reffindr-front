@@ -7,7 +7,7 @@ import { GoPencil } from 'react-icons/go';
 import { MdEdit } from 'react-icons/md';
 
 import { Field } from '@/components/ui/field';
-import { FileUploadRoot, FileUploadTrigger } from '@/components/ui/file-upload';
+import { FileUploadRoot } from '@/components/ui/file-upload';
 import { NativeSelectField, NativeSelectRoot } from '@/components/ui/native-select';
 import { toaster } from '@/components/ui/toaster';
 import { GENRES, STATES } from '@/constants/form-data-constants';
@@ -32,7 +32,7 @@ export const ViewEditProfile = () => {
       phone: '',
       address: '',
       birthDate: '',
-      profileImageUrl: null,
+      profileImageUrl: '',
       profileImage: null,
     },
     () => ({})
@@ -116,7 +116,6 @@ export const ViewEditProfile = () => {
             <Avatar.Fallback>LF</Avatar.Fallback>
             <Float placement={'bottom-end'} offset='4'>
               <FileUploadRoot onChange={readImage}>
-                <FileUploadTrigger>
                   <IconButton
                     disabled={!isEditing}
                     rounded='full'
@@ -128,7 +127,6 @@ export const ViewEditProfile = () => {
                   >
                     <GoPencil />
                   </IconButton>
-                </FileUploadTrigger>
               </FileUploadRoot>
             </Float>
           </Avatar.Root>

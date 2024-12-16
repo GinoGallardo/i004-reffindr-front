@@ -7,9 +7,11 @@ import { Breadcrumb } from '@/app/UI/components/breadcrumb/Breadcrumb'
 
 export const HomeLayout = () => {
   return (
-    <Flex>
-      <Sidebar />
-      <Box flexGrow={1} p={'20px'} bgColor={'#edf2f7'}>
+    <Flex >
+      <Box flexShrink={0} zIndex={'100'}>
+        <Sidebar />
+      </Box>
+      <Box h={'100vh'} flexGrow={1} ml={{base:'55px', lg:'277px'}} p={{base: '15px', md: '20px'}} bgColor={'#edf2f7'}>
         <Box mb={3}>
           <SearchWithFiltersAndNotification />
             <Breadcrumb />

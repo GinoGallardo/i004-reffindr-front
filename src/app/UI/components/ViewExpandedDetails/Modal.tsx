@@ -32,7 +32,7 @@ export const Modal = ({
 }: ModalProps) => {
   return (
     <DialogRoot open={open}>
-      <DialogContent>
+      <DialogContent m={{base: '8px', md: '0'}}>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>

@@ -47,8 +47,11 @@ export const HeadSection = ({ title, backgroundImage, headLink }: Props) => {
           <Flex alignItems='center'>
             <Box>
               <LogoComponent src={'assets/logos-svg/logoblanco.svg'} />
+              <Box display={{ base: 'flex', md: 'none' }}>
+                <LenguageIcon />
+              </Box>
             </Box>
-            <Flex justifyContent='end' flexGrow={1} gapX={5}>
+            <Flex w={'full'} justifyContent={'end'} flexGrow={1} gapX={5}>
               <Link fontSize={{ base: 'xs', sm: 'md' }} color='white' asChild variant='underline' _focus={{ boxShadow: 'none', outline: 'none' }}>
                 <RouterLink to={headLink.path}>{headLink.title}</RouterLink>
               </Link>
@@ -63,7 +66,9 @@ export const HeadSection = ({ title, backgroundImage, headLink }: Props) => {
                 isOpen={showRegister}
                 onOpenChange={() => setShowRegister((prev) => !prev)}
               />
-              <LenguageIcon />
+              <Box display={{ base: 'none', md: 'flex' }}>
+                <LenguageIcon />
+              </Box>
             </Flex>
           </Flex>
           <Grid gapY={10} whiteSpace={'pre-line'} placeContent='center' flexGrow={1}>

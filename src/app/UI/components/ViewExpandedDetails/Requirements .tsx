@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa6'
 export const Requirements = () => {
   return (
     <Box border='1px solid' borderColor='gray.300' p={4} borderRadius='md' w='full'>
-      <Flex direction='row' justifyContent='space-between' gap={6}>
+      <Flex direction={{base:'column', md: 'row'}} justifyContent='space-between' gap={6}>
         <Text fontWeight='bold' mb={4}>
           Requisitos:
         </Text>

@@ -31,7 +31,7 @@ export const OutgoingTenantHelp = () => {
       {data.map((item) => (
       <Fieldset.Content>
         <Field>
-          <NativeSelectRoot h={'47px'} border={'solid 1px gray'} borderRadius={5} alignItems={'center'} px={3} >            
+          <NativeSelectRoot h={{base:'60px', md:'47px'}} border={'solid 1px gray'} borderRadius={5} alignItems={'center'} px={3} >            
               {[item.ask]}            
           </NativeSelectRoot>
         </Field>

@@ -27,8 +27,8 @@ export const OutgoingTenantHelp = () => {
   const { t } = useTranslation()
 
   return (
-    <Fieldset.Root size='lg' invalid gapY={1} bg={'white'} padding={5} border={'solid 1px #d3d3d3'} >
-      <Fieldset.Content fontSize={24} fontWeight={'bold'}>
+    <Fieldset.Root size='lg' invalid gapY={1} bg={'white'} padding={{base:'5px', md:'10px'}} border={'solid 1px #d3d3d3'} >
+      <Fieldset.Content fontSize={{base:'20px', md:'24px'}} fontWeight={'bold'}>
         {t('TenantHelp.title')}
       </Fieldset.Content>
       <hr style={{ maxWidth: '450px', width: '100%', backgroundColor: '#d3d3d3', height: '3px', border: 'none' }} />
@@ -37,7 +37,7 @@ export const OutgoingTenantHelp = () => {
         <Fieldset.Content key={index}>
           <Field>
             <NativeSelectRoot
-              h={'40px'}
+              h={{base:'95px', md:'40px'}}
               border={'solid 1px #d3d3d3'}
               borderRadius={5}
               alignItems={'center'}

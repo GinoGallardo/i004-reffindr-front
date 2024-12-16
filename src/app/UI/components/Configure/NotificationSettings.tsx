@@ -6,7 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 export const NotificationSetting = () => {
   const { t } = useTranslation()
   return (
-    <Flex bg='white' justify='center' align='center' p={4} h={'40rem'}>
+    <Flex bg='white' justify='center' align='center' p={4} h={{base:'30rem', md:'40rem'}}>
       <Stack gap={4} w='full' maxW='lg'>
         <Link
           as={RouterLink}
@@ -16,7 +16,7 @@ export const NotificationSetting = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
               {t('configure.notificationSetting.sort-notifications')}
             </Text>
           </HStack>
@@ -31,11 +31,11 @@ export const NotificationSetting = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
             {t('configure.notificationSetting.lock-screen')}
             </Text>
           </HStack>
-          <MdChevronRight size={'36'} />
+          <MdChevronRight size={'30'} />
         </Link>
 
         <Link
@@ -46,7 +46,7 @@ export const NotificationSetting = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
             {t('configure.notificationSetting.delete-notifications')}
             </Text>
           </HStack>

@@ -9,7 +9,7 @@ export const SelectorTypeComponent = () => {
 
   const { tenantRole, toggleTenantRole } = useTenantStore((state) => state)
   return (
-    <HStack wrap='wrap' mb={2} gap='5'>
+    <HStack wrap='wrap' mb={2} gap={{base:'1', md: '5'}}>
       <Box borderBottom={tenantRole === TenantRoles.incomming ? '3px solid #1E3A8A' : undefined}>
         <Button
           _disabled={{ cursor: 'pointer' }}

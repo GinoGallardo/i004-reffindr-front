@@ -37,7 +37,7 @@ export const Details = ({
   };
   return (
     <Box>
-      <Flex alignItems='center' gap='2'>
+      <Flex alignItems='center' gap='4'>
         <Text as='h1' fontSize='xl' fontWeight='bold'>
           {title}
         </Text>
@@ -75,12 +75,12 @@ export const Details = ({
         </Flex>
       </Box>
 
-      <Text letterSpacing='tight' mt='2' mb='2'>
+      <Box letterSpacing='tight' mt='2' mb='2'>
         <Flex alignItems='center' gap='1'>
           <RiMapPin2Line />
           {location}
         </Flex>
-      </Text>
+      </Box>
 
       <Box display='flex' gap='2'>
         {features.map((feature) => (

@@ -15,13 +15,13 @@ export const SearchWithFiltersAndNotification = () => {
   const tenantRole = useTenantStore((state) => state.tenantRole)
 
   return (
-    <HStack gap='6' width='full' align='center' bg={'white'} mb={2} py={2} px={2}>
+    <HStack display={'flex'} flexDirection={{base: 'column', md: 'row'}} gap={{base: '1', md: '6'}} width='full' align='center' bg={'white'} mb={2} py={2} px={{base: '2', md: '2'}}>
       {/* este es mi inputt de búsqueda */}
-      <Flex width={'50%'}>
+      <Flex width={{md: '50%'}}>
         <Input
           placeholder={t('search')}
           variant={'outline'}
-          pr='40px'
+          pr={{base: '60px', md: '20px'}}
           _placeholder={{ color: 'black.500' }}
           _hover={{ borderColor: 'black.400' }}
         />
@@ -32,7 +32,7 @@ export const SearchWithFiltersAndNotification = () => {
       </Flex>
 
       {/* este es mi menu de filtros*/}
-      <Box width={'50%'} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
+      <Box width={{base: '100%', md: '50%'}} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
         <MenuRoot>
           <MenuTrigger asChild>
             <Button variant='outline' size='sm' display='flex' alignItems='center' gap='8px' borderColor='gray.300'>

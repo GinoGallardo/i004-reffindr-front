@@ -6,7 +6,7 @@ import { Link as RouterLink } from 'react-router-dom';
 export const PasswordManagement = () => {
   const { t } = useTranslation()
   return (
-    <Flex bg='white' justify='center' align='center' p={4} h={'40rem'}>
+    <Flex bg='white' justify='center' align='center' p={4} h={{base:'30rem', md:'40rem'}}>
       <Stack gap={4} w='full' maxW='lg'>
         <Link
           as={RouterLink}
@@ -16,7 +16,7 @@ export const PasswordManagement = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
               {t('configure.passwordManagement.two-step-verification')}
             </Text>
           </HStack>
@@ -31,11 +31,11 @@ export const PasswordManagement = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
             {t('configure.passwordManagement.change-password')}
             </Text>
           </HStack>
-          <MdChevronRight size={'36'} />
+          <MdChevronRight size={'30'} />
         </Link>
 
         <Link
@@ -46,7 +46,7 @@ export const PasswordManagement = () => {
           _hover={{ bg: 'blue.50', textDecoration: 'none' }}
         >
           <HStack gap={4}>
-            <Text fontSize='2xl' fontWeight='medium' color='gray.700'>
+            <Text fontSize={{base:'md', md:'2xl'}} fontWeight='medium' color='gray.700'>
             {t('configure.passwordManagement.password-vulnerability')}
             </Text>
           </HStack>
