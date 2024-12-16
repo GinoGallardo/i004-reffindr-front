@@ -15,10 +15,10 @@ import { ExpandedDetails } from '@/app/UI/components/ViewExpandedDetails/Expande
 import { HomeLayout } from '@/layouts/HomeLayout'
 
 import { OwnerLanding } from '../app/features/Home/views/OwnerLanding'
-import { authenticated, requireAuth } from './loaders/authLoader'
+// import { authenticated, requireAuth } from './loaders/authLoader'
 import { Configuration } from '@/app/UI/components/Configure/Configuration'
 import { Language } from '@/app/UI/components/ButtonLanguage/Language'
-import { getPropertyByIdLoader } from './loaders/propertiesLoader'
+// import { getPropertyByIdLoader } from './loaders/propertiesLoader'
 import { ErrorBoundary } from '@/app/features/Error/ErrorBoundary'
 import { NotificationSetting } from '@/app/UI/components/Configure/NotificationSettings'
 import { PasswordManagement } from '@/app/UI/components/Configure/PasswordManagement'
@@ -30,17 +30,17 @@ export const router = createBrowserRouter(
     {
       path: '/owner',
       element: <OwnerLanding />,
-      loader: authenticated,
+      // loader: authenticated,
     },
     {
       path: '/inquilinos',
       element: <HomePage />,
-      loader: authenticated,
+      // loader: authenticated,
     },
     {
       path: '/',
       element: <HomeLayout />,
-      loader: requireAuth,
+      // loader: requireAuth,
       hydrateFallbackElement: <Flex>Loading...</Flex>,
       children: [
         {
@@ -53,7 +53,7 @@ export const router = createBrowserRouter(
         },
         {
           path: 'home/:propertyName',
-          loader: getPropertyByIdLoader,
+          // loader: getPropertyByIdLoader,
           errorElement: <ErrorBoundary />,
           element: <ExpandedDetails />,
         },

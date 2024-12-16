@@ -95,7 +95,7 @@ export const MenuAnnouncement = React.memo(() => {
 
   return (
     <>
-      <Flex justifyContent='start' mb={3} p={2}>
+      <Flex flexDirection={{base:'column', md:'row'}} justifyContent='start' mb={3} p={2}>
         {Object.values(AnnoucementsTabs).map((tab) => (
           <Box key={tab} cursor='pointer' onClick={() => setActiveTab(tab)}>
             <Text p={2}>{tab}</Text>

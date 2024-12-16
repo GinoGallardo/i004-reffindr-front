@@ -63,10 +63,12 @@ export const PropertyDetails: React.FC<PropertyDetailsProps> = ({
     assingNewValues({ images: formStateImages });
   };
   return (
-    <Flex direction={'column'} py={4} px={8}>
-      <Flex mb={5} flexDirection={'row'} alignItems={'center'} gap={4}>
+    <Flex w={'full'} direction={'column'} justifyContent={'center'} py={4} px={{base:'2', md:'8'}}>
+      <Flex mb={5} flexDirection={{base:'column', md:'row'}} alignItems={'center'} justifyContent={'center'} gap={{base:'2', md:'4'}}>
         {formState.images.length == 0 ? (
           <EmptyState
+            w={{base:'11rem', md:'full'}}
+            p={1}
             icon={<ImFilePicture />}
             title='No tienes multimedia cargada'
             description='Aceptamos archivos de imagen o video .jpg y .png'
@@ -92,14 +94,14 @@ export const PropertyDetails: React.FC<PropertyDetailsProps> = ({
         )}
 
         <FileUploadRoot onChange={readImages} accept={'image/*'} maxFiles={20}>
-          <FileUploadTrigger asChild>
+          <FileUploadTrigger asChild mx={'auto'}>
             <Button variant='outline' size='sm'>
               <HiUpload /> Seleccionar imagenes o videos
             </Button>
           </FileUploadTrigger>
         </FileUploadRoot>
       </Flex>
-      <Grid templateColumns={'repeat(2, 1fr)'} gap={4}>
+      <Grid display={{base:'flex', md:'grid'}} flexDirection={'column'} templateColumns={{base:'1fr', md:'repeat(2, 1fr)'}} gap={4}>
         <GridItem>
           <Field
             label='Nombre o título de propiedad:'

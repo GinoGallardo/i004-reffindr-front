@@ -40,7 +40,7 @@ export const PropertyCharacteristic = React.memo(({
   return (
     <>
       <Flex px={8} py={8} direction={'column'}>
-        <Grid gridTemplateColumns={'repeat(2,1fr)'} gapX={14} gapY={4}>
+        <Grid gridTemplateColumns={{base:'1fr', md:'repeat(2,1fr)'}} gapX={14} gapY={4}>
           <GridItem>
             <CustomSelect
               label='Ambientes:'

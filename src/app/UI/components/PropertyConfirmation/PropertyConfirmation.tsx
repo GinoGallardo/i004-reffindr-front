@@ -32,7 +32,7 @@ export const PropertyConfirmation = ({ formState, handleInputChange }: Props) =>
   return (
     <Flex p={8} flexDirection='column'>
       <Flex
-        direction='row'
+        direction={{base:'column', md:'row'}}
         justifyContent={showDialog ? 'center' : 'space-between'}
         alignItems={showDialog ? 'center' : 'flex-start'}
       >
