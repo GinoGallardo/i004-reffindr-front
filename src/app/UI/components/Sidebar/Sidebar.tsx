@@ -133,7 +133,7 @@ const Sidebar = () => {
         {isExpanded && (
           <Flex justifyContent='center' alignItems='center' gap='2' mb={5}>
             <SkeletonCircle loading={isUserDataPending}>
-              <Avatar size='lg' name='Sage' src={actualUser?.imageProfileUrl ?? ''} />
+              <Avatar size='2xl' name='Sage' src={actualUser?.imageProfileUrl ?? '/public/AvatarImage1.png'} />
             </SkeletonCircle>
             <Flex flexGrow={1} flexDir='column' gapY={1}>
               <Skeleton loading={isUserDataPending}>

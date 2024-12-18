@@ -7,7 +7,6 @@ export const NotificationCard = () => {
     
     <Alert status="info" bg="white" border="1px solid #E2E8F0" borderRadius="md" p="4">
       <Flex alignItems="center">
-        {/*mi icono de alerte */}
         <IoIosNotificationsOutline size={24} style={{ marginRight: "8px", color: "black" }} />
         <Box flex="1">
           

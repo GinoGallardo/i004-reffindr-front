@@ -44,8 +44,8 @@ export const HeadSection = ({ title, backgroundImage, headLink }: Props) => {
         bgImage={`url(${backgroundImage})`}
       >
         <Flex px={6} flexDirection='column' minH='100vh'>
-          <Flex alignItems='center'>
-            <Box>
+          <Flex flexDirection={{base:'column', md:'row'}} alignItems='center'>
+            <Box w={'full'} display={'flex'} justifyContent={'space-between'}>
               <LogoComponent src={'assets/logos-svg/logoblanco.svg'} />
               <Box display={{ base: 'flex', md: 'none' }}>
                 <LenguageIcon />

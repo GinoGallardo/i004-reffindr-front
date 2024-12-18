@@ -112,7 +112,7 @@ export const ViewEditProfile = () => {
       >
         <Flex flexDir='column' alignItems='center'>
           <Avatar.Root w={'7em'} h={'7em'}>
-            <Avatar.Image src={formState.profileImageUrl ?? ''} />
+            <Avatar.Image src={'/public/AvatarImage1.png'} />
             <Avatar.Fallback>LF</Avatar.Fallback>
             <Float placement={'bottom-end'} offset='4'>
               <FileUploadRoot onChange={readImage}>
